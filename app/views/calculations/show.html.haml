@@ -1,0 +1,7 @@
+%h1 Calculs
+%p tester votre calcul mental
+.calculs
+  = @operation.addition
+  %p
+    = form_tag do
+      = text_field_tag(:result)
