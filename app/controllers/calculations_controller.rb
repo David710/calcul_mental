@@ -1,11 +1,16 @@
 class CalculationsController < ApplicationController
 
   def show
-    @operation = Training.new
+    @calculation = Training.new.addition
+    @operation = @calculation[:operation]
+    @result = @calculation[:result]
+    puts "result : ____ " + @result.to_s
   end
 
   def show_answer
     @answer = params["result"]
-    render plain: @answer.inspect
+    @good_result = params["good_result"]
+    # render plain: params.inspect
   end
+
 end
