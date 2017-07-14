@@ -8,7 +8,7 @@
           = @operation
         %p
           = form_tag do
-            = text_field_tag(:result, nil, { autocomplete: "off", autofocus: "true", id: "answer-input", type: "tel"} )
+            = text_field_tag(:result, nil, { autocomplete: "off", autofocus: "true", id: "answer-input" } )
             = hidden_field_tag(:good_result, value = @result)
 
   .results
