@@ -1,3 +1,11 @@
+// variable definition
+// colors
+
+$green-sucess: #00E676;
+$red-fail: #D81B60;
+$content: rgba(#E1BEE7,0.5);
+
+// fin de definition des variables
 
 #operation {
   font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -5,14 +13,35 @@
 }
 
 #answer-input {
-  width: 100%;
+  width: 50%;
   font-size: 700%;
   outline: none;
   border: none;
   border-color: transparent;
-  text-align: center
+  text-align: center;
+}
+
+#correct {
+  color: $green-sucess;
+  font-size: 300%;
+}
+
+#faux {
+  color: $red-fail;
+  font-size: 300%;
 }
 
 #content {
+  padding-top: 10%;
+  background-color: $content;
+}
 
+#content-correct{
+    padding-top: 10%;
+    background-color: $green-sucess;
+}
+
+#content-false{
+    padding-top: 10%;
+    background-color: $red-fail;
 }

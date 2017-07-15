@@ -8,4 +8,12 @@ module CalculationsHelper
     end
   end
 
+  def set_content_id(answer, result)
+    if answer == result
+      "content-correct"
+    else
+      "content-false"
+    end
+  end
+
 end
