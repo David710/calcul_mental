@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   resources :calculations
   post '/' => 'calculations#show_answer'
+
 end
