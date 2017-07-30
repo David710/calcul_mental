@@ -16,4 +16,14 @@ module CalculationsHelper
     end
   end
 
+  def score
+    score = 0
+    Training.last(10).each do |training|
+      if training.correctness
+        score += 1
+      end
+    end
+    score
+  end
+
 end

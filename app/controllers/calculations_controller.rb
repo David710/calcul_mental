@@ -24,6 +24,7 @@ class CalculationsController < ApplicationController
     @calculation_save = Training.new
     @calculation_save.begining = Time.current
     @calculation_save.rang = rang
+    @calculation_save.correctness = is_correct?(@answer, @good_result)
     @calculation_save.save
 
     if rang <= 10
@@ -42,5 +43,15 @@ class CalculationsController < ApplicationController
         render :welcome
       end
   end
+
+  private
+
+    def is_correct?(answer, result)
+      if answer == result
+        true
+      else
+        false
+      end
+    end
 
 end

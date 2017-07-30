@@ -19,4 +19,4 @@
 - now = Time.current
 - beg = Training.last(2)[0].begining
 %p.temps temps:
-%p.temps= now - beg
+%p.temps= ( now - beg ).round(1)

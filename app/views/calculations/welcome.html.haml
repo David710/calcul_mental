@@ -3,4 +3,7 @@
 - now = Training.last(10)[9].begining
 - beg = Training.last(10)[0].begining
 %p.temps temps:
-%p.temps= now - beg
+%p.temps= ( now - beg ).round(1)
+
+%p.temps votre score est de :
+%p.temps= score.to_s + " / 10"

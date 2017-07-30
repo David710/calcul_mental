@@ -4,6 +4,7 @@
 $green-sucess: #00E676;
 $red-fail: #D81B60;
 $content: rgba(#E1BEE7,0.5);
+$results: #3D5AFE;
 
 // fin de definition des variables
 
@@ -49,5 +50,5 @@ $content: rgba(#E1BEE7,0.5);
 .temps {
   font-size: 20px;
   font-weight: bold;
-  color: $green-sucess;
+  color: $results;
 }
