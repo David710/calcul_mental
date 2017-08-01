@@ -18,19 +18,22 @@
 
 - now = Time.current
 - beg = Training.last(2)[0].begining
-%p.temps temps:
-%p.temps= ( now - beg ).round(1)
+-# %p.temps temps:
+-# %p.temps= ( now - beg ).round(1)
 
 #keyboard
   #keyboard-0
     .number#zero 0
+    .number#delete <-
+    .number#enter ok
+
   #keyboard-1
     .number#one 1
     .number#two 2
     .number#three 3
 
   #keyboard-2
-    .number#4 4
+    .number#four 4
     .number#five 5
     .number#six 6
 
