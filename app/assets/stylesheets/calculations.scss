@@ -4,7 +4,8 @@
 $green-sucess: #00E676;
 $red-fail: #D81B60;
 $content: rgba(#E1BEE7,0.5);
-$results: #3D5AFE;
+$results: #BA68C8;
+$background-welcome: #F5F5F5;
 
 // fin de definition des variables
 
@@ -47,12 +48,6 @@ $results: #3D5AFE;
     background-color: $red-fail;
 }
 
-.temps {
-  font-size: 50px;
-  font-weight: bold;
-  color: $results;
-}
-
 #button-session {
   background-color: $results;
   border: none;
@@ -79,4 +74,20 @@ $results: #3D5AFE;
   padding: 20px;
   margin: 20px;
   cursor: pointer;
+}
+
+//styling de la page welcome
+
+#welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $background-welcome;
+}
+
+.temps {
+  font-size: 50px;
+  font-weight: bold;
+  color: $results;
 }

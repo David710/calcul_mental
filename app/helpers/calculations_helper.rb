@@ -1,7 +1,7 @@
 module CalculationsHelper
 
   def is_correct?(answer, result)
-    if answer == result
+    if answer.to_i == result.to_i
       true
     else
       false
@@ -9,7 +9,7 @@ module CalculationsHelper
   end
 
   def set_content_id(answer, result)
-    if answer == result
+    if answer.to_i == result.to_i
       "content-correct"
     else
       "content-false"

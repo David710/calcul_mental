@@ -69,5 +69,4 @@ window.onload = () ->
 
   document.getElementById("enter").onclick = () ->
     #document.getElementById("answer-input").focus()
-    console.log $("#answer-input")
     $("form").submit()

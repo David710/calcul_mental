@@ -13,8 +13,16 @@ class Training < ApplicationRecord
   end
 
   def substraction
-    substraction = Random.rand(1...9).to_s + " - " + Random.rand(1...9).to_s
+    set_time_zone
+    number1 = Random.rand(1...9)
+    number2 = Random.rand(1...9)
+    if number1 >= number2
+      substraction = number1.to_s + " - " + number2.to_s
+    else
+      substraction = number2.to_s + " - " + number1.to_s
+    end
     result = eval(substraction)
-    {operation: substraction, result: result}
+    begining = Time.current
+    {operation: substraction, result: result, begining: begining}
   end
 end

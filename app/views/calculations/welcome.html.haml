@@ -1,9 +1,12 @@
-= button_to "Nouvelle session", calculations_show_path, id: "button-session", method: :get , params: [rang: 1]
+#welcome-container
 
-- now = Training.last(10)[9].begining
-- beg = Training.last(10)[0].begining
-%p.temps temps:
-%p.temps= ( now - beg ).round(1).to_s + " secondes"
+  = button_to "Nouvelle session", calculations_show_path, id: "button-session", method: :get , params: [rang: 1]
 
-%p.temps votre score est de :
-%p.temps= score.to_s + " / 10"
+  - now = Training.last(10)[9].begining
+  - beg = Training.last(10)[0].begining
+
+  %p.temps= "temps : " + ( now - beg ).round(1).to_s + " secondes"
+
+  %p.temps= "votre score est de : " + score.to_s + " / 10"
+
+  %p= pie_chart({"Bonnes réponses" => score, "Mauvaises réponses" => 10 - score})

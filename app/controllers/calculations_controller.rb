@@ -15,8 +15,8 @@ class CalculationsController < ApplicationController
       rang = Training.last(1)[0].rang + 1
     end
 
-    @calculation = Training.new.addition
-    # @calculation = Training.new.substraction
+    #@calculation = Training.new.addition
+    @calculation = Training.new.substraction
     @operation = @calculation[:operation]
     @result = @calculation[:result]
     @begining = @calculation[:begining]
