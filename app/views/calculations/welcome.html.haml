@@ -1,6 +1,7 @@
 #welcome-container
-
-  = button_to "Nouvelle session", calculations_show_path, id: "button-session", method: :get , params: [rang: 1]
+  #welcome-buttons
+    = button_to "Additions", calculations_show_path, id: "button-session-additions", class: "button-session", method: :get , params: [rang: 1, operation: "addition"]
+    = button_to "Soustractions", calculations_show_path, id: "button-session-substractions", class: "button-session", method: :get , params: [rang: 1, operation: "soustraction"]
 
   - now = Training.last(10)[9].begining
   - beg = Training.last(10)[0].begining

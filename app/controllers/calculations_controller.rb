@@ -15,8 +15,26 @@ class CalculationsController < ApplicationController
       rang = Training.last(1)[0].rang + 1
     end
 
-    #@calculation = Training.new.addition
-    @calculation = Training.new.substraction
+    if params[:operation] == "addition"
+      @operation_sign = "addition"
+    else
+      if params[:operation] == "soustraction"
+        @operation_sign = "substraction"
+      else
+        @operation_sign = Training.last(1)[0].operation
+      end
+    end
+
+    if @operation_sign == "addition"
+      @calculation = Training.new.addition
+    else
+      if @operation_sign == "substraction"
+        @calculation = Training.new.substraction
+      else
+        @calculation = Training.new.addition
+      end
+    end
+
     @operation = @calculation[:operation]
     @result = @calculation[:result]
     @begining = @calculation[:begining]
@@ -25,6 +43,7 @@ class CalculationsController < ApplicationController
     @calculation_save.begining = Time.current
     @calculation_save.rang = rang
     @calculation_save.correctness = is_correct?(@answer, @good_result)
+    @calculation_save.operation = @operation_sign
     @calculation_save.save
 
     if rang <= 10

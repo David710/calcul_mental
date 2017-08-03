@@ -48,7 +48,7 @@ $background-welcome: #F5F5F5;
     background-color: $red-fail;
 }
 
-#button-session {
+.button-session {
   background-color: $results;
   border: none;
   color: white;
@@ -59,6 +59,7 @@ $background-welcome: #F5F5F5;
   font-size: 16px;
   margin-top: 20px;
   cursor: pointer;
+  margin: 10px;
 }
 
 #keyboard-0, #keyboard-1, #keyboard-2, #keyboard-3 {
@@ -84,6 +85,11 @@ $background-welcome: #F5F5F5;
   justify-content: center;
   align-items: center;
   background-color: $background-welcome;
+}
+
+#welcome-buttons {
+  display: flex;
+  flex-direction: row;
 }
 
 .temps {
