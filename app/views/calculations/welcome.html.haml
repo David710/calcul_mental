@@ -1,13 +1,15 @@
-#welcome-container
-  #welcome-buttons
-    = button_to "Additions", calculations_show_path, id: "button-session-additions", class: "button-session", method: :get , params: [rang: 1, operation: "addition"]
-    = button_to "Soustractions", calculations_show_path, id: "button-session-substractions", class: "button-session", method: :get , params: [rang: 1, operation: "soustraction"]
+.row.center-xs.center-sm.center-md.center-lg
+  .col-xs.col-sm.col-md.col-lg
+    #welcome-container
+      #welcome-buttons
+        = button_to "Additions", calculations_show_path, id: "button-session-additions", class: "button-session", method: :get , params: [rang: 1, operation: "addition"]
+        = button_to "Soustractions", calculations_show_path, id: "button-session-substractions", class: "button-session", method: :get , params: [rang: 1, operation: "soustraction"]
 
-  - now = Training.last(10)[9].begining
-  - beg = Training.last(10)[0].begining
+      - now = Training.last(10)[9].begining
+      - beg = Training.last(10)[0].begining
 
-  %p.temps= "temps : " + ( now - beg ).round(1).to_s + " secondes"
+      %p.temps= "temps : " + ( now - beg ).round(1).to_s + " secondes"
 
-  %p.temps= "votre score est de : " + score.to_s + " / 10"
+      %p.temps= "votre score est de : " + score.to_s + " / 10"
 
-  %p= pie_chart({"Bonnes réponses" => score, "Mauvaises réponses" => 10 - score})
+      -# %p= pie_chart({"Bonnes réponses" => score, "Mauvaises réponses" => 10 - score})
