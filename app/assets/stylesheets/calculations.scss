@@ -32,7 +32,7 @@ $purple : rgb(129,0,255);
 
 #correct {
   color: $green-sucess;
-  background-image: url("green-balls.png");
+  background-image: url('/assets/green-balls.png');
   font-size: 300%;
 }
 
@@ -50,7 +50,7 @@ $purple : rgb(129,0,255);
 #content-correct{
     padding-top: 10%;
     background-color: $green-sucess;
-    background-image: url("green-balls.png");
+    background-image: url('/assets/green-balls.png');
 }
 
 #content-false{
