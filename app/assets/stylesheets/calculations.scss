@@ -1,17 +1,24 @@
 // variable definition
 // colors
 
-$green-sucess: #00E676;
-$red-fail: #D81B60;
+// $green-sucess: rgba(#00E676,0.5);
+$green-sucess: rgba(0,208,200,0.5);
+// $red-fail: rgba(#D81B60,0.5);
+$red-fail: rgba(255,35,151,0.5);
 $content: rgba(#E1BEE7,0.5);
 $results: #BA68C8;
 $background-welcome: #F5F5F5;
+$purple : rgb(129,0,255);
 
 // fin de definition des variables
 
 #operation {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 700%;
+}
+
+.calculs {
+  margin-bottom: 200px;
 }
 
 #answer-input {
@@ -25,11 +32,13 @@ $background-welcome: #F5F5F5;
 
 #correct {
   color: $green-sucess;
+  background-image: url("green-balls.png");
   font-size: 300%;
 }
 
 #faux {
   color: $red-fail;
+  background-image: url("red-balls.png");
   font-size: 300%;
 }
 
@@ -41,11 +50,13 @@ $background-welcome: #F5F5F5;
 #content-correct{
     padding-top: 10%;
     background-color: $green-sucess;
+    background-image: url("green-balls.png");
 }
 
 #content-false{
     padding-top: 10%;
     background-color: $red-fail;
+    background-image: url("red-balls.png");
 }
 
 .button-session {
@@ -72,9 +83,13 @@ $background-welcome: #F5F5F5;
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 120px;
   border: 1px solid;
-  padding: 20px;
+  padding: 150px 20px 20px 20px;
   margin: 20px;
   cursor: pointer;
+  color: $purple;
+  height: 230px;
+  width: 300px;
+  text-align: center;
 }
 
 //styling de la page welcome
@@ -84,7 +99,9 @@ $background-welcome: #F5F5F5;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $background-welcome;
+  // background-color: $background-welcome;
+  background-image: url("image003.png");
+  opacity: 1.0;
 }
 
 #welcome-buttons {
@@ -95,5 +112,6 @@ $background-welcome: #F5F5F5;
 .temps {
   font-size: 50px;
   font-weight: bold;
-  color: $results;
+  color: black;
+  font-family: cursive;
 }
