@@ -81,15 +81,20 @@ $purple : rgb(129,0,255);
 
 .number {
   font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 120px;
+  font-size: 8em;
   border: 1px solid;
-  padding: 150px 20px 20px 20px;
-  margin: 20px;
+  padding: 1% 1% 1% 1%;
+  margin: 1%;
   cursor: pointer;
   color: $purple;
-  height: 230px;
-  width: 300px;
+  // height: 5%;
+  width: 30%;
   text-align: center;
+}
+
+.img-number {
+  height: 40%;
+  width: 40%;
 }
 
 //styling de la page welcome
@@ -99,9 +104,9 @@ $purple : rgb(129,0,255);
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // background-color: $background-welcome;
   background-image: url("image003.png");
   opacity: 1.0;
+  padding: 20% 0% 20% 0%;
 }
 
 #welcome-buttons {
